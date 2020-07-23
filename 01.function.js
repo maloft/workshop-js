@@ -25,3 +25,13 @@ var multiplication = function(nb1, nb2){
 resultat3 = multiplication(nombre1, nombre2);
 
 console.log("resultat3 = " + resultat3);
+
+var afficherOperation = function(nomOperation, operation, nb1, nb2){
+    console.log(nomOperation + "(" + nb1 + ", " + nb2 + ") = " + operation(nb1, nb2) );
+}
+
+afficherOperation("Somme", somme, 20, 40);
+
+afficherOperation("Multiplication", multiplication, 10, 20);
+
+afficherOperation("Soustraction", function(a, b){ return a - b ;}, 15, 5);
